@@ -8,7 +8,7 @@ namespace GridToRelativeLayout
         {
             InitializeComponent();
 
-            SetBackgroundColors(true);
+            SetBackgroundColors(false);
         }
 
         void SetBackgroundColors(bool areBackgroundColorsEnabled)

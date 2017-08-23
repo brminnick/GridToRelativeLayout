@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace GridToRelativeLayout
 {
-    public partial class RelativeLayoutPage : ContentPage
+    public class RelativeLayoutPage : ContentPage
     {
         public RelativeLayoutPage()
         {
@@ -56,7 +56,6 @@ namespace GridToRelativeLayout
 
             var textLabel = new Label
             {
-                BackgroundColor = Color.Brown,
                 Text = "Text Label",
                 FontSize = 45,
                 HorizontalTextAlignment = TextAlignment.Center,

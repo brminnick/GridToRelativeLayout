@@ -34,15 +34,11 @@
     <Compile Include="GridPage.xaml.cs">
       <DependentUpon>GridPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RelativeLayoutPage.xaml.cs">
-      <DependentUpon>RelativeLayoutPage.xaml</DependentUpon>
+    <Compile Include="RelativeLayoutPage.cs">
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="GridPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RelativeLayoutPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
