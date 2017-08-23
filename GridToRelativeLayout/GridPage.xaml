@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="GridToRelativeLayout.GridPage" Padding="0,20,0,0">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid x:Name="emptyGrid" Grid.Row="1" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <StackLayout Padding="10,0,10,0" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label x:Name="emptyLabel" FontSize="18" XAlign="Center" TextColor="Gray" Text="emptyLabel"/>
+                </StackLayout>
+                <Button x:Name="resetButton" Text="Reset points?" TextColor="White" FontAttributes="Bold" FontSize="20" HeightRequest="60" BackgroundColor="#E19A3F" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                    <Button.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double" iOS="25" Android="20" />
+                    </Button.FontSize>
+                </Button>
+            </Grid>
+            <Grid x:Name="phraseGrid" Padding="20, 20, 20, 20" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="6*" />
+                    <RowDefinition Height="6*" />
+                    <RowDefinition Height="80*" />
+                    <RowDefinition Height="13*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid x:Name="prGrid" Grid.Row="0" Grid.Column="0" Padding="5,0,0,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Transparent">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25*" />
+                        <ColumnDefinition Width="25*" />
+                        <ColumnDefinition Width="50*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="msg1" Grid.Row="0" Grid.Column="0" />
+                    <Label Text="msg2" Grid.Row="0" Grid.Column="1" />
+                    <Label Text="msg3" Grid.Row="0" Grid.Column="2" />
+                </Grid>
+                <Grid x:Name="siGrid" Grid.Row="1" Grid.Column="0" Padding="5,0,0,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25*" />
+                        <ColumnDefinition Width="25*" />
+                        <ColumnDefinition Width="50*" />
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="faveLabel" FontFamily="FontAwesome" Grid.Row="0" Grid.Column="0" Text="faveLabel" />
+                    <Label x:Name="wordTypeLabel" Grid.Row="0" Grid.Column="1" Text="wordTypeLabel" />
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45*" />
+                        <RowDefinition Height="55*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Label x:Name="textLabel" FontSize="45" XAlign="Center" VerticalOptions="Center" LineBreakMode="WordWrap" Text="textLabel" />
+                    </Grid>
+                    <Grid x:Name="detailGrid" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10,0,10,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Label x:Name="detail1" Grid.Row="0" Text="detail1" />
+                        <Label x:Name="detail2" Grid.Row="1" Text="detail2" />
+                        <Label x:Name="detail3" Grid.Row="2" Text="detail3" />
+                    </Grid>
+                </Grid>
+                <Grid x:Name="buttonGrid" Grid.Row="3" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Padding="20, 0">
+                    <Button x:Name="aButton" Grid.Column="0" Text="0">
+                    </Button>
+                    <Button x:Name="bButton" Grid.Column="1" Text="1">
+                    </Button>
+                    <Button x:Name="cButton" Grid.Column="2" Text="2">
+                    </Button>
+                    <Button x:Name="dButton" Grid.Column="3" Text="5">
+                    </Button>
+                </Grid>
+                <Grid x:Name="tapGrid" Grid.Row="3" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                    <Label x:Name="tapScreenLabel" />
+                </Grid>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
