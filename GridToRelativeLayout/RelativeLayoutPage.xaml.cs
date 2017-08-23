@@ -51,10 +51,16 @@ namespace GridToRelativeLayout
                 Margin = new Thickness(0, 26, 0, 0)
             };
 
-            var faveLabel = new Label { Text = "faveLabel" };
-            var wordTypeLabel = new Label { Text = "wordType" };
+            var faveLabel = new Label { Text = "Fave" };
+            var wordTypeLabel = new Label { Text = "Word" };
 
-            var textLabel = new Label { Text = "Text Label" };
+            var textLabel = new Label
+            {
+                Text = "Text Label",
+                FontSize = 45,
+                HorizontalTextAlignment = TextAlignment.Center,
+                VerticalTextAlignment = TextAlignment.Center
+            };
 
             var detail1Label = new Label { Text = "detail1" };
             var detail2Label = new Label { Text = "detail2" };
@@ -108,7 +114,15 @@ namespace GridToRelativeLayout
                                         Constraint.RelativeToView(msg2Label, (parent, view) => view.X + view.Width),
                                         Constraint.RelativeToView(resetPointsButton, (parent, view) => view.Y + view.Height),
                                         Constraint.RelativeToParent(parent => parent.Width * 0.5));
-            
+            relativeLayout.Children.Add(faveLabel,
+                                        Constraint.Constant(25),
+                                        Constraint.RelativeToView(msg1Label, (parent, view) => view.Y + view.Height + 20),
+                                        Constraint.RelativeToParent(parent => parent.Width * 0.25));
+            relativeLayout.Children.Add(wordTypeLabel,
+                                        Constraint.RelativeToView(faveLabel, (parent, view) => view.X + view.Width),
+                                        Constraint.RelativeToView(msg1Label, (parent, view) => view.Y + view.Height + 20),
+                                        Constraint.RelativeToParent(parent => parent.Width * 0.25));
+
 
             Padding = GetPadding();
             Content = relativeLayout;
