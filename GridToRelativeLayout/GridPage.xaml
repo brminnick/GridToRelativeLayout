@@ -49,7 +49,7 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
-                    <Grid Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Grid x:Name="textLabelGrid" Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                         <Label x:Name="textLabel" FontSize="45" XAlign="Center" VerticalOptions="Center" LineBreakMode="WordWrap" Text="Text Label" />
                     </Grid>
                     <Grid x:Name="detailGrid" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10,0,10,0">
